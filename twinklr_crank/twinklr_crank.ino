@@ -1,4 +1,8 @@
-// Twinklr encoder. For reference, our encoder is wired:
+// Teensyduino code for theTwinklr encoder. 
+//
+//Tested on a Teensy LC
+//
+// For reference, our encoder is wired:
 //
 // Blue wire (0V) to G
 // Black wire (A) to pin 5
