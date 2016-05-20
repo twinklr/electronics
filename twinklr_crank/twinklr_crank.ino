@@ -1,6 +1,7 @@
 // Teensyduino code for theTwinklr encoder. 
 //
 //Tested on a Teensy LC
+// set Type to 'Serial+Mouse+Keyboard+Joystick
 //
 // For reference, our encoder is wired:
 //
@@ -29,15 +30,21 @@ void loop() {
     if(newPosition > (oldPosition+squashFactor)) {
       Mouse.move(0,0,2);
       oldPosition = newPosition;
+          Serial.println(newPosition);
+    
+    Serial.print(digitalRead(5));
+    Serial.print(" ");
+    Serial.println(digitalRead(6));
     }
     
     if(newPosition < (oldPosition-squashFactor)) {
       Mouse.move(0,0,-2);
       oldPosition = newPosition;
+          Serial.println(newPosition);
+    
+    Serial.print(digitalRead(5));
+    Serial.print(" ");
+    Serial.println(digitalRead(6));
     }
-    
-    Serial.println(newPosition);
-    
-
   }
 }
